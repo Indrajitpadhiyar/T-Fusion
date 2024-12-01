@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lexend:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Strike&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lexend:wght@100..900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Strike&display=swap');
+
+.carousel-item img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    filter: brightness(0.3);
+}
+
+
+.search {
+    border: 2px solid black;
+    border-radius: 8px 0 0 8px;
+}
+
+.search_butoon {
+    border: 2px solid black;
+    border-radius: 0 8px 8px 0;
+    background-color: blue;
+}
+
+.text-color {
+    color: white;
+}
+
+.button {
+    width: 5vw;
+    height: 6vh;
+    margin-top: 375px;
+    background-color: aliceblue;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    background-color: black;
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+ul li {
+    list-style: none;
+    margin: 0 23px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: white;
+    margin: 0 23px;
+}
+
+ul li a:hover {
+    font-size: larger;
+    color: orangered;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.left {
+    font-size: 2rem;
+    color: white;
+    padding: 20px;
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+}
+
+.section_p1 {
+    padding: 40px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section2 {
+    width: 100%;
+    height: 100vh;
+}
+
+.feture {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    padding: 20px;
+}
+
+.feture .fe_box {
+    width: 180px;
+    text-align: center;
+    padding: 25px 15px;
+    box-shadow: 2px 5px 20px rgba(0, 0, 0, 0.3);
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+.feture .fe_box:hover {
+    width: 200px;
+    height: 210px;
+    transition: 0.2s;
+}
+
+.p{
+    color: #aba9a9;
+}
+h6 {
+    display: inline-block;
+    font-family: "Oswald", sans-serif;
+    background-color: rgb(246, 130, 88);
+    color: rgb(192, 235, 192);
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+h1{
+    font-family: "Oswald", sans-serif;
+    font-weight:900;
+}
+
+
+
+.product {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.card {
+    width: 290px;
+    height: 354px;
+    padding: 0.8em;
+    margin: 20px 0;
+    background: #f5f5f5;
+    position: relative;
+    overflow: visible;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.card-img {
+    background-color: white;
+    background-image: url('imagis/Untitled.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 45%;
+    width: 100%;
+    border-radius: 0.5rem;
+    transition: 0.3s ease;
+}
+
+.card-img2 {
+    background-color: white;
+    background-image: url('imagis/spicker.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 45%;
+    width: 100%;
+    border-radius: 0.5rem;
+    transition: 0.3s ease;
+}
+
+.card-img3 {
+    background-color: white;
+    background-image: url('imagis/Airdopes.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 45%;
+    width: 100%;
+    border-radius: 0.5rem;
+    transition: 0.3s ease;
+}
+.card-img4 {
+    background-color: white;
+    background-image: url('imagis/headphone2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 45%;
+    width: 100%;
+    border-radius: 0.5rem;
+    transition: 0.3s ease;
+}
+
+
+.card-info {
+    padding-top: 10%;
+}
+
+svg {
+    width: 20px;
+    height: 20px;
+}
+
+.card-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+}
+
+
+.text-title {
+    font-weight: 900;
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+.text-body {
+    font-size: .9em;
+    padding-bottom: 10px;
+}
+
+.card-button {
+    border: 1px solid #252525;
+    display: flex;
+    padding: .3em;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: .3s ease-in-out;
+}
+
+
+.card-img:hover,
+.card-img2:hover,
+.card-img3:hover,
+.card-img4:hover{
+    transform: translateY(-25%);
+    box-shadow: rgba(226, 196, 63, 0.25) 0px 13px 47px -5px, rgba(180, 71, 71, 0.3) 0px 8px 16px -8px;
+}
+
+.card-button:hover {
+    border: 1px solid #ffcaa6;
+    background-color: #ffcaa6;
+}
+
+
+@media screen and (max-width: 768px) {
+    .carousel-item img {
+        height: 40vh;
+    }
+
+    nav {
+        justify-content: space-between;
+        align-items: end;
+        background-color: black;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .feture {
+        width: 100vw;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .feture .fe_box {
+        width: 25vw;
+        padding: 10px;
+    }
+
+    .feture .fe_box:hover {
+        width: 26vw;
+        height: 26vw;
+        padding: 10px;
+    }
+
+    .feture .fe_box img {
+        max-width: 60px;
+    }
+
+    h6 {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .product {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+        margin: 10px auto;
+    }
+
+    .card-img,
+    .card-img2,
+    .card-img3,
+    .card-img4 {
+        height: 150px;
+        background-size: contain;
+    }
+
+    .card-info {
+        padding-top: 5%;
+    }
+
+    .card-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
