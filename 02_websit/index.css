@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lexend:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Strike&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lexend:wght@100..900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Strike&display=swap');
 
+* {
+    /* overflow: hidden; */
+    text-decoration: none;
+}
+
 .carousel-item img {
     width: 100vw;
     height: 100vh;
@@ -116,9 +121,10 @@ ul li a:hover {
     transition: 0.2s;
 }
 
-.p{
+.p {
     color: #aba9a9;
 }
+
 h6 {
     display: inline-block;
     font-family: "Oswald", sans-serif;
@@ -128,9 +134,10 @@ h6 {
     border: 1px solid black;
     border-radius: 5px;
 }
-h1{
+
+h1 {
     font-family: "Oswald", sans-serif;
-    font-weight:900;
+    font-weight: 900;
 }
 
 
@@ -189,6 +196,7 @@ h1{
     border-radius: 0.5rem;
     transition: 0.3s ease;
 }
+
 .card-img4 {
     background-color: white;
     background-image: url('imagis/headphone2.png');
@@ -245,7 +253,7 @@ svg {
 .card-img:hover,
 .card-img2:hover,
 .card-img3:hover,
-.card-img4:hover{
+.card-img4:hover {
     transform: translateY(-25%);
     box-shadow: rgba(0, 0, 0, 0) 0px 13px 47px -5px, rgba(0, 0, 0, 0) 0px 8px 16px -8px;
 }
@@ -255,6 +263,149 @@ svg {
     background-color: #ffcaa6;
 }
 
+footer {
+    width: 100%;
+    height: 77vh;
+    background-color: rgb(2, 2, 78);
+}
+
+/* From Uiverse.io by david-mohseni */
+.wrapper {
+    display: inline-flex;
+    list-style: none;
+    height: 120px;
+    width: 100%;
+    padding-top: 40px;
+    font-family: "Poppins", sans-serif;
+    justify-content: center;
+}
+
+.wrapper .icon {
+    position: relative;
+    background: #fff;
+    border-radius: 50%;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background: #fff;
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #fff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+    background: #1877f2;
+    color: #fff;
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+    background: #1da1f2;
+    color: #fff;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+    background: #e4405f;
+    color: #fff;
+}
+
+.containt {
+    width: 100%;
+    color: white;
+    text-align: left;
+    margin-top: 10vh;
+    display: flex;
+    justify-content: center;
+}
+
+.Get_to_know_Us {
+    width: 20vh;
+    margin: 30px 30px;
+}
+
+.Make_Money_with_Us {
+    width: 20vh;
+    margin: 30px 30px;
+}
+
+.Let_Us_Help_You {
+    width: 20vh;
+    margin: 30px 30px;
+}
+
+.Let_Us_Help_You a,
+.Make_Money_with_Us a,
+.Get_to_know_Us a {
+    text-decoration: none;
+    color: rgb(179, 179, 179);
+}
+
+.Let_Us_Help_You a:hover,
+.Make_Money_with_Us a:hover,
+.Get_to_know_Us a:hover {
+    text-decoration: underline;
+}
+
+.Home {
+    width: 100%;
+}
+
+.Home a {
+    text-decoration: none;
+}
+
+.color {
+    width: 100%;
+    height: 9vh;
+    background-color: #0171b7
+}
 
 @media screen and (max-width: 768px) {
     .carousel-item img {
@@ -267,6 +418,68 @@ svg {
         background-color: black;
     }
 
+    footer {
+        height: auto;
+        padding: 20px;
+    }
+
+    .footer_container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .containt {
+        flex-direction: column;
+        margin-top: 5vh;
+        text-align: center;
+    }
+
+    .Get_to_know_Us,
+    .Make_Money_with_Us,
+    .Let_Us_Help_You {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .Get_to_know_Us h4,
+    .Make_Money_with_Us h4,
+    .Let_Us_Help_You h4 {
+        font-size: 16px;
+    }
+
+    .Get_to_know_Us a,
+    .Make_Money_with_Us a,
+    .Let_Us_Help_You a {
+        font-size: 14px;
+    }
+
+    .wrapper {
+        flex-wrap: wrap;
+        padding-top: 20px;
+    }
+
+    .wrapper .icon {
+        width: 40px;
+        height: 40px;
+        margin: 5px;
+    }
+
+    .tooltip {
+        font-size: 12px;
+    }
+
+    .Home {
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    .Home a {
+        font-size: 14px;
+    }
+
+    .color {
+        height: 6vh;
+    }
 }
 
 @media (max-width: 480px) {
