@@ -12,7 +12,7 @@ gsap.from(".feture", {
 
 function creatProductCard(productName, productDetail, price, imagePath) {
     let html = `
-        <div class="card">
+        <div class="card" data-name="${productName}" data-price="${price}" data-image="${imagePath}" data-detail="${productDetail}">
             <div class="card-img" style="background-image: url('${imagePath}');"></div>
             <div class="card-info">
                 <p class="text-title">${productName}</p>
@@ -35,9 +35,159 @@ function creatProductCard(productName, productDetail, price, imagePath) {
                 </div>
             </div>
         </div>`;
-    document.querySelector(".product").innerHTML += html;
+    document.querySelector(".productContainer").innerHTML += html;
 }
 
+
+// Add event listeners to cards after they are dynamically created
+document.querySelector(".productContainer").addEventListener("click", function (e) {
+    const card = e.target.closest(".card");
+    if (card) {
+        const name = card.dataset.name;
+        const price = card.dataset.price;
+        const image = card.dataset.image;
+        const detail = card.dataset.detail;
+
+        const existingPopup = document.querySelector(".product-popup");
+        if (existingPopup) existingPopup.remove();
+
+        const popup = document.createElement("div");
+        popup.classList.add("product-popup");
+        popup.innerHTML = `
+            <h2>${name}</h2>
+            <div class="productimg">
+            <img src="${image}" alt="${name}">
+            </div>
+            <hr>
+            <p>Price: ${price}</p>
+            <p>${detail}</p> 
+            <button>Close</button>
+
+                <button class="buybutton">
+                BUY NOW
+                <div class="star-1">
+                    <svg
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 0 784.11 815.53"
+                    style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                    version="1.1"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    >
+                    <defs></defs>
+                    <g id="Layer_x0020_1">
+                        <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                        <path
+                        d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                        class="fil0"
+                        ></path>
+                    </g>
+                    </svg>
+                </div>
+                <div class="star-2">
+                    <svg
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 0 784.11 815.53"
+                    style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                    version="1.1"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    >
+                    <defs></defs>
+                    <g id="Layer_x0020_1">
+                        <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                        <path
+                        d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                        class="fil0"
+                        ></path>
+                    </g>
+                    </svg>
+                </div>
+                <div class="star-3">
+                    <svg
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 0 784.11 815.53"
+                    style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                    version="1.1"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    >
+                    <defs></defs>
+                    <g id="Layer_x0020_1">
+                        <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                        <path
+                        d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                        class="fil0"
+                        ></path>
+                    </g>
+                    </svg>
+                </div>
+                <div class="star-4">
+                    <svg
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 0 784.11 815.53"
+                    style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                    version="1.1"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    >
+                    <defs></defs>
+                    <g id="Layer_x0020_1">
+                        <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                        <path
+                        d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                        class="fil0"
+                        ></path>
+                    </g>
+                    </svg>
+                </div>
+                <div class="star-5">
+                    <svg
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 0 784.11 815.53"
+                    style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                    version="1.1"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    >
+                    <defs></defs>
+                    <g id="Layer_x0020_1">
+                        <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                        <path
+                        d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                        class="fil0"
+                        ></path>
+                    </g>
+                    </svg>
+                </div>
+                <div class="star-6">
+                    <svg
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 0 784.11 815.53"
+                    style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                    version="1.1"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    >
+                    <defs></defs>
+                    <g id="Layer_x0020_1">
+                        <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                        <path
+                        d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                        class="fil0"
+                        ></path>
+                    </g>
+                    </svg>
+                </div>
+                </button>
+
+                        `;
+
+        popup.querySelector("button").addEventListener("click", () => popup.remove());
+
+        document.body.appendChild(popup);
+    }
+});
 
 creatProductCard("OJOS Headphone", "OJOS Silicone Case Cover Compatible with Apple AirPods Max New USB-C (2024)...", "₹1,099", "imagis/Untitled.png");
 creatProductCard("Marshall Speaker", "Marshall Willen Portable Bluetooth Speaker with 15+ Hours of Portable Playtime...", " ₹8,499", "imagis/spicker.png");
@@ -47,3 +197,4 @@ creatProductCard("MageGee Gaming Wired Keyboard", "MageGee Gaming Wired Keyboard
 creatProductCard("MSI Raider GE68 HX", "MSI Raider GE68 HX, Intel 14th Gen. i9-14900HX, 41CM UHD+ MiniLED 120Hz Gaming Laptop..", " ₹3,48,290", "imagis/gaminglaptop.jpg");
 creatProductCard("Cooling Pad with Dual USB Port", "Kreo Tundra 5 Fans RGB Laptop Cooling Pad with Dual USB Port...", " ₹1,998", "imagis/collingpaid.jpg");
 creatProductCard(" Laptop Sleeve  ", "Dyazo Water Resistant Laptop Sleeve with Handle Compatible for 15 Inch...", "  ₹299", "imagis/laptopbag.jpg");
+

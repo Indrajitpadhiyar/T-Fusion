@@ -25,6 +25,13 @@
     background-color: blue;
 }
 
+#search-result {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+
 .text-color {
     color: white;
 }
@@ -141,6 +148,48 @@ h1 {
 }
 
 
+.productContainer {
+    display: flex;
+    /* Enables flexbox */
+    flex-wrap: wrap;
+    /* Allows wrapping to the next row if needed */
+    gap: 20px;
+    /* Adds space between the cards */
+    justify-content: center;
+    /* Centers the cards horizontally */
+    padding: 20px;
+}
+
+.card {
+    width: 300px;
+    /* Set a fixed width for each card */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.card-img {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.card-info {
+    padding: 10px;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-top: 1px solid #ddd;
+}
 
 .product {
     display: flex;
@@ -368,6 +417,203 @@ footer {
     height: 9vh;
     background-color: #0171b7
 }
+
+.product-popup .card-button {
+    width: 10px;
+}
+
+.product-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    z-index: 1000;
+}
+
+.product-popup h2 {
+    margin-top: 0;
+}
+
+.productimg {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-popup img {
+    width: 44%;
+    height: auto;
+}
+
+.product-popup button {
+    display: block;
+    margin: 20px auto 0;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.product-popup button:hover {
+    background-color: #0056b3;
+}
+
+/* From Uiverse.io by dalbrechtmartin */
+.buybutton {
+    position: relative;
+    padding: 20px 35px;
+    background: #ffffff;
+    font-size: 20px;
+    font-weight: 600;
+    color: #000000;
+    box-shadow: 0px 0px 10px 0px rgb(255, 255, 255);
+    border-radius: 100px;
+    border: none;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.star-1 {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    width: 25px;
+    height: auto;
+    filter: drop-shadow(0 0 0 #141414);
+    z-index: -5;
+    transition: all 0.8s cubic-bezier(0.05, 0.83, 0.43, 0.96);
+}
+
+.star-2 {
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    width: 15px;
+    height: auto;
+    filter: drop-shadow(0 0 0 #141414);
+    z-index: -5;
+    transition: all 0.8s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-3 {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 5px;
+    height: auto;
+    filter: drop-shadow(0 0 0 #141414);
+    z-index: -5;
+    transition: all 0.8s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-4 {
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    width: 8px;
+    height: auto;
+    filter: drop-shadow(0 0 0 #141414);
+    z-index: -5;
+    transition: all 0.8s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-5 {
+    position: absolute;
+    top: 25%;
+    left: 45%;
+    width: 15px;
+    height: auto;
+    filter: drop-shadow(0 0 0 #141414);
+    z-index: -5;
+    transition: all 0.8s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-6 {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    width: 5px;
+    height: auto;
+    filter: drop-shadow(0 0 0 #141414);
+    z-index: -5;
+    transition: all 0.8s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.buybutton:hover {
+    background: #000000;
+    color: #ffffff;
+    box-shadow: 0 0 80px #ffffff8c;
+}
+
+.buybutton:hover .star-1 {
+    position: absolute;
+    top: -20%;
+    left: -20%;
+    width: 20px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #141414);
+    z-index: 2;
+}
+
+.buybutton:hover .star-2 {
+    position: absolute;
+    top: 35%;
+    left: -25%;
+    width: 15px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #141414);
+    z-index: 2;
+}
+
+.buybutton:hover .star-3 {
+    position: absolute;
+    top: 80%;
+    left: -10%;
+    width: 10px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #141414);
+    z-index: 2;
+}
+
+.buybutton:hover .star-4 {
+    position: absolute;
+    top: -25%;
+    left: 105%;
+    width: 20px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #141414);
+    z-index: 2;
+}
+
+.buybutton:hover .star-5 {
+    position: absolute;
+    top: 30%;
+    left: 115%;
+    width: 15px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #141414);
+    z-index: 2;
+}
+
+.buybutton:hover .star-6 {
+    position: absolute;
+    top: 80%;
+    left: 105%;
+    width: 10px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #141414);
+    z-index: 2;
+}
+
+.fil0 {
+    fill: #141414;
+}
+
 
 @media screen and (max-width: 768px) {
     .carousel-item img {
