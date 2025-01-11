@@ -616,6 +616,12 @@ footer {
 
 
 @media screen and (max-width: 768px) {
+
+    .product-popup {
+        width: 40%;
+        height: 70%;
+    }
+
     .carousel-item img {
         height: 40vh;
     }
@@ -691,6 +697,12 @@ footer {
 }
 
 @media (max-width: 480px) {
+
+    .product-popup {
+        width: 40%;
+        height: 70%;
+    }
+
     .feture {
         width: 100vw;
         gap: 10px;
@@ -718,6 +730,11 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .product-popup {
+        width: 80%;
+        height: 70%;
+    }
+
     .product {
         flex-direction: column;
     }
