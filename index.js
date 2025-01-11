@@ -63,7 +63,7 @@ document.querySelector(".productContainer").addEventListener("click", function (
             <p>${detail}</p> 
             <button>Close</button>
 
-                <button class="buybutton">
+                <button class="buybutton" id="Buy now">
                 BUY NOW
                 <div class="star-1">
                     <svg
