@@ -7,33 +7,42 @@
     <title>Add to Cart</title>
     <link rel="icon" href="imagis/T.png">
     <style>
-        .cart-item {
+  .cart-item {
             display: flex;
-            flex-direction: column;
-            /* Stack elements vertically */
             align-items: center;
             border: 1px solid #ccc;
             padding: 10px;
             margin: 10px;
-            width: 200px;
-            /* Optional: Limit card width */
+        }
+
+        .cart-item img {
+            max-width: 100px;
+            margin-right: 20px;
+        }
+        @media (max-width: 768px) {
+            .cart-item {
+            display: flex;
+            flex-direction: column; /* Stack elements vertically */
+            align-items: center;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            width: 200px; /* Optional: Limit card width */
         }
 
         .cart-item img {
             max-width: 100%;
-            margin-bottom: 10px;
-            /* Space between image and product info */
+            margin-bottom: 10px; /* Space between image and product info */
         }
 
         .cart-item h2 {
-            margin-bottom: 10px;
-            /* Space between title and image */
+            margin-bottom: 10px; /* Space between title and image */
         }
 
         .cart-item p {
-            text-align: center;
-            /* Center align text for better appearance */
+            text-align: center; /* Center align text for better appearance */
         }
+}
     </style>
 </head>
 
