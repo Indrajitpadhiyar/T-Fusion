@@ -184,6 +184,27 @@ document.querySelector(".productContainer").addEventListener("click", function (
                         `;
 
         popup.querySelector("button").addEventListener("click", () => popup.remove());
+        popup.querySelector(".buybutton").addEventListener("click", () => {
+            // Get the existing cart from localStorage (or create a new array if none exists)
+            let cart = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+            // Add the new product to the cart
+            const product = { name, price, image, detail };
+
+            // Check if the product already exists in the cart
+            const isProductInCart = cart.some((item) => item.name === name);
+
+            if (!isProductInCart) {
+                cart.push(product); // Add the new product to the cart only if not already added
+            }
+
+            // Save the updated cart back to localStorage
+            localStorage.setItem("cartItems", JSON.stringify(cart));
+
+            // Open addtocart.html in a new tab
+            window.open("addtocart.html", "_blank");
+            popup.remove();
+        });
 
         document.body.appendChild(popup);
     }
