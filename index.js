@@ -59,8 +59,8 @@ document.querySelector(".productContainer").addEventListener("click", function (
             <img src="${image}" alt="${name}">
             </div>
             <hr>
-            <p>Price: ${price}</p>
             <p>${detail}</p> 
+            <p>Price: ${price}</p>
             <button>Close</button>
 
                 <button class="buybutton" id="Buy now">
@@ -207,10 +207,10 @@ document.querySelector(".productContainer").addEventListener("click", function (
         });
 
         document.body.appendChild(popup);
-    }
+    }   
 });
 
-creatProductCard("OJOS Headphone", "OJOS Silicone Case Cover Compatible with Apple AirPods Max New USB-C (2024)...", "₹1,099", "imagis/Untitled.png");
+creatProductCard("OJOS Headphone", "OJOS Silicone Case Cover Compatible with Apple AirPods Max New USB-C (2024 ", "₹1,099", "imagis/Untitled.png");
 creatProductCard("Marshall Speaker", "Marshall Willen Portable Bluetooth Speaker with 15+ Hours of Portable Playtime...", " ₹8,499", "imagis/spicker.png");
 creatProductCard("boAt Airdopes 91", "boAt Airdopes 91 w/ 45 Hours Playtime, Beast Mode w/ 50 ms Low Latency...", "₹899", "imagis/Airdopes.png");
 creatProductCard("ZEBRONICS Havoc ", "ZEBRONICS Havoc Premium Gaming Over Ear Headphone with Dolby Atmos Subscription..", "₹1,799", "imagis/headphone2.png");
